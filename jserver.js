@@ -2,5 +2,12 @@ let http = require ('http');
 
 const PORT = 8080;
 
-const server = http.createServer();
+function handleRequest (req, res) {
 
+}
+
+const server = http.createServer(handleRequest);
+
+server.listen (PORT, function () {
+    console.log("server now listening on port: " + PORT);
+})
