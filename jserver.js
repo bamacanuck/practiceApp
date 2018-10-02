@@ -3,7 +3,7 @@ let http = require ('http');
 const PORT = 8080;
 
 function handleRequest (req, res) {
-
+    res.end("It's working. " + req.url);
 }
 
 const server = http.createServer(handleRequest);
