@@ -12,6 +12,7 @@ function handleRequest (req, res) {
 
 function handleRequestX (req, res) {
     res.end("Here's your response. It's working on this port, too. " + req.url);
+    process.exit(0);
 }
 
 // VITAL STEP TWO : declare the server
