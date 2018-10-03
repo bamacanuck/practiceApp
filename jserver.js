@@ -10,6 +10,7 @@ function handleRequest (req, res) {
 // VITAL STEP TWO : declare the server
 const server = http.createServer(handleRequest);
 
+// VITAL STEP THREE: set the listener
 server.listen (PORT, function () {
     console.log("server now listening on port: " + PORT);
 })
