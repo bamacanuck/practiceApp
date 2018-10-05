@@ -3,21 +3,24 @@ let http = require ('http');
 
 const PORT = 8080;
 
-let path = req.url;
-
 // const PORTTwo = 9999;
 
 // VITAL STEP FOUR (in part): set the handler/handlers
 function handleRequest (req, res) {
     // res.end("Here's your response. It's working. " + req.url);
 
+    let path = req.url;
+
     switch (path) {
 
         case "/":
             return displayHome (path, req, res);
 
-        case "/pageTwo":
-            return displayPageTwo (path, req, res);
+        case "/Two":
+            return displayTwo (path, req, res);
+
+        case "/Three":
+            return displayThree (path, req, res);
     }
 }
 
@@ -44,17 +47,30 @@ server.listen (PORT, function () {
 function displayHome(url, req, res) {
     var ourHTML = "<html>" +
       "<body><h1>Home Page</h1>" +
-      "<a href='/'>Go to Portfolio</a>" +
+      "<a href='/Two'>Go to Portfolio</a>" +
+      "<a href='/Three'>Go to Third Page</a>" +
       "</body></html>";
   
     res.writeHead(200, { "Content-Type": "text/html" });
     res.end(ourHTML);
   }
 
-function displayPageTwo(url, req, res) {
+function displayTwo(url, req, res) {
     var ourHTML = "<html>" +
       "<body><h1>Portfolio Page</h1>" +
-      "<a href='/'>Go Home</a>" +
+      "<a href='/'>Go Home</a>" + "<br /> <br />" +
+      "<a href='/Three'>Go to Third Page</a>" +
+      "</body></html>";
+  
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.end(ourHTML);
+  }
+
+  function displayThree(url, req, res) {
+    var ourHTML = "<html>" +
+      "<body><h1>Third Page</h1>" +
+      "<a href='/'>Go Home</a>" + "<br /> <br />" +
+      "<a href='/Two'>Go to Portfolio</a>" +
       "</body></html>";
   
     res.writeHead(200, { "Content-Type": "text/html" });
