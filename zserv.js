@@ -10,6 +10,24 @@ server.listen (PORT, function () {
 
 function handlerF (req, res) {
     path = req.url;
-    let thisHTML = "<html> <body> <h1> THIS IS THE PAGE, Y'ALL !!! </h1> </body> </html>";
-    res.end(thisHTML);
+
+    switch (path) {
+
+        case "/":
+
+            let thisHTML = "<html> <body> <h1> THIS IS THE PAGE, Y'ALL !!! </h1> </body> </html>";
+            res.end(thisHTML);
+
+        case "/two":
+            let thatHTML = "<html> <body> <h1> THIS IS THE SECOND PAGE, Y'ALL !!! </h1> </body> </html>";
+            res.end(thatHTML);
+
+        case "/three":
+            let otherHTML = "<html> <body> <h1> THIS IS THE THIRD PAGE, Y'ALL !!! </h1> </body> </html>";
+            res.end(otherHTML);
+
+        default:
+            let x = "<html> <body> <h1> INCORRECT - TRY AGAIN </h1> </body> </html>";
+            res.end(x);
+    }
 };
