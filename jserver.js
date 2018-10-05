@@ -3,11 +3,22 @@ let http = require ('http');
 
 const PORT = 8080;
 
+let path = req.url;
+
 // const PORTTwo = 9999;
 
 // VITAL STEP FOUR (in part): set the handler/handlers
 function handleRequest (req, res) {
-    res.end("Here's your response. It's working. " + req.url);
+    // res.end("Here's your response. It's working. " + req.url);
+
+    switch (path) {
+
+        case "/":
+            return displayHome (path, req, res);
+
+        case "/pageTwo":
+            return displayPageTwo (path, req, res);
+    }
 }
 
 // function handleRequestX (req, res) {
