@@ -29,3 +29,23 @@ server.listen (PORT, function () {
 // serverTwo.listen (PORTTwo, function () {
 //     console.log("server now listening on port: " + PORTTwo);
 // })
+
+function displayHome(url, req, res) {
+    var ourHTML = "<html>" +
+      "<body><h1>Home Page</h1>" +
+      "<a href='/'>Go to Portfolio</a>" +
+      "</body></html>";
+  
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.end(ourHTML);
+  }
+
+function displayPageTwo(url, req, res) {
+    var ourHTML = "<html>" +
+      "<body><h1>Portfolio Page</h1>" +
+      "<a href='/'>Go Home</a>" +
+      "</body></html>";
+  
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.end(ourHTML);
+  }
