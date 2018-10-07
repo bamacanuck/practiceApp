@@ -23,6 +23,6 @@ function handleReq (req, res) {
             res.end("two two two two two");
 
         default:
-            res.end("nope nope nope nope nope");
+            res.end("404 error - nope nope nope nope nope");
     }
 };
