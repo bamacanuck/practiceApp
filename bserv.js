@@ -10,5 +10,5 @@ server.listen(PORT, function () {
 
 function handleRequest (req, res) {
     let path = req.url;
-    res.end("this is the " + path + " path, for routing purposes.");
+    res.end("This is the " + path + " path, for routing purposes.");
 };
