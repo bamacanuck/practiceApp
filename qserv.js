@@ -30,6 +30,8 @@ function handlerX (req, res) {
     }
 };
 
+// try to get (below) external-doc html delivery working
+
 function callIt (req, res) {
     fs.readFile(__dirname + "/index.html", function(err, data) {
 
