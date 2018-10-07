@@ -23,7 +23,10 @@ function handlerX (req, res) {
             // an html file.
             res.writeHead(200, { "Content-Type": "text/html" });
             res.end(data);
+        });
         
         default:
-                res.end("NOPE... TRY SOMETHING ELSE");
-}
+            res.end("NOPE... TRY SOMETHING ELSE");
+        
+    }
+};
