@@ -9,16 +9,6 @@ server.listen(PORT, function () {
     console.log("huzzah - our server's now listening on port: " + PORT);
 });
 
-function callIt (req, res) {
-    fs.readFile(__dirname + "/index.html", function(err, data) {
-
-        // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
-        // an html file.
-        res.writeHead(200, { "Content-Type": "text/html" });
-        res.end(data);
-    });
-};
-
 function handlerX (req, res) {
     let path = req.url;
 
@@ -31,10 +21,21 @@ function handlerX (req, res) {
             res.end("huh... r");
 
         case "/this":
-            callIt(req, res);
+            res.end("no, 'this' is not cursed");
+            // callIt(req, res);
         
         default:
             res.end("NOPE... TRY SOMETHING ELSE");
         
     }
+};
+
+function callIt (req, res) {
+    fs.readFile(__dirname + "/index.html", function(err, data) {
+
+        // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
+        // an html file.
+        res.writeHead(200, { "Content-Type": "text/html" });
+        res.end(data);
+    });
 };
