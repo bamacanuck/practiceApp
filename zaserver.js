@@ -14,7 +14,7 @@ function handleReq (req, res) {
     switch (path) {
 
         case "/":
-            res.end(" ");
+            res.end("home page reached (congratulations)");
 
         case "/1":
             res.end("one one one one one");
