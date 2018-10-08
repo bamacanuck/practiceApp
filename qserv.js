@@ -21,8 +21,13 @@ function handlerX (req, res) {
             res.end("huh... r");
 
         case "/this":
-            // res.end("no, 'this' is not cursed");
-            return callIt(path, req, res);
+            fs.readFile(__dirname + "/index.html", function(err, data) {
+
+                // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
+                // an html file.
+                res.writeHead(200, { "Content-Type": "text/html" });
+                res.end(data);
+            });
         
         default:
             res.end("NOPE... TRY SOMETHING ELSE");
