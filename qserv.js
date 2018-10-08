@@ -22,7 +22,7 @@ function handlerX (req, res) {
 
         case "/this":
             // res.end("no, 'this' is not cursed");
-            return callIt(req, res);
+            return callIt(path, req, res);
         
         default:
             res.end("NOPE... TRY SOMETHING ELSE");
@@ -32,7 +32,7 @@ function handlerX (req, res) {
 
 // try to get (below) external-doc html delivery working
 
-function callIt (req, res) {
+function callIt (url, req, res) {
     fs.readFile(__dirname + "/index.html", function(err, data) {
 
         // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
