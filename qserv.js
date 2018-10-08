@@ -15,19 +15,37 @@ function handlerX (req, res) {
     switch (path) {
     
         case "/":
-            res.end("The handlerX function has been called, successfully. \n\nThis is the " + path + " path.");
-
-        case "/r":
-            res.end("huh... r");
-
-        case "/this":
-            return fs.readFile(__dirname + "/indexr.html", function(err, data) {
+        return fs.readFile(__dirname + "/index.html", function(err, data) {
 
             // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
             // an html file.
             res.writeHead(200, { "Content-Type": "text/html" });
             res.end(data);
             });
+
+        case "/r":
+            res.end("huh... r");
+
+        case "/this":
+            return fs.readFile(__dirname + "/quick1.html", function(err, data) {
+
+            // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
+            // an html file.
+            res.writeHead(200, { "Content-Type": "text/html" });
+            res.end(data);
+            });
+
+        case "/that":
+            return fs.readFile(__dirname + "/quick2.html", function(err, data) {
+
+            // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
+            // an html file.
+            res.writeHead(200, { "Content-Type": "text/html" });
+            res.end(data);
+            });
+
+        case "/callit":
+            return callIt(req, res);
         
         default:
             res.end("NOPE... TRY SOMETHING ELSE");
