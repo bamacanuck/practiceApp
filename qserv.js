@@ -21,12 +21,12 @@ function handlerX (req, res) {
             res.end("huh... r");
 
         case "/this":
-            fs.readFile(__dirname + "/index.html", function(err, data) {
+            return fs.readFile(__dirname + "/indexr.html", function(err, data) {
 
-                // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
-                // an html file.
-                res.writeHead(200, { "Content-Type": "text/html" });
-                res.end(data);
+            // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
+            // an html file.
+            res.writeHead(200, { "Content-Type": "text/html" });
+            res.end(data);
             });
         
         default:
@@ -34,8 +34,6 @@ function handlerX (req, res) {
         
     }
 };
-
-// typo fix
 
 // try to get (below) external-doc html delivery working
 
