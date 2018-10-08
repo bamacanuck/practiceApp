@@ -35,6 +35,8 @@ function handlerX (req, res) {
     }
 };
 
+// typo fix
+
 // try to get (below) external-doc html delivery working
 
 function callIt (url, req, res) {
