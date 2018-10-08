@@ -21,8 +21,8 @@ function handlerX (req, res) {
             res.end("huh... r");
 
         case "/this":
-            res.end("no, 'this' is not cursed");
-            // callIt(req, res);
+            // res.end("no, 'this' is not cursed");
+            return callIt(req, res);
         
         default:
             res.end("NOPE... TRY SOMETHING ELSE");
