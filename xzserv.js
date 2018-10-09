@@ -1,5 +1,7 @@
 const http = require("http");
 
+const fs = require("fs");
+
 const PORT = 8090;
 
 let server = http.createServer(handleReq);
@@ -17,7 +19,8 @@ function handleReq (req, res) {
         case "/":
             res.end ("hey");
         
-        
+        case "/x":
+            
     }
 };
 
