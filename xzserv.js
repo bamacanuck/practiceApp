@@ -20,7 +20,13 @@ function handleReq (req, res) {
             res.end ("hey");
         
         case "/x":
-            return fs.readFile(__dirname + "/index.html", function (err, data) {
+            return fs.readFile(__dirname + "/quick1.html", function (err, data) {
+                res.writeHead(200, {"Content-Type": "text-html"});
+                res.end(data);
+            });
+        
+        case "/y":
+            return fs.readFile(__dirname + "/quick2.html", function (err, data) {
                 res.writeHead(200, {"Content-Type": "text-html"});
                 res.end(data);
             });
