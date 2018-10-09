@@ -20,7 +20,9 @@ function handleReq (req, res) {
             res.end ("hey");
         
         case "/x":
-            
+            return fs.readFile(__dirname + "/index.html", function (err, data) {
+                res.end(data);
+            });
     }
 };
 
