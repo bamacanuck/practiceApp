@@ -2,6 +2,8 @@ const http = require ("http");
 
 const fs = require ("fs");
 
+let PORT = 8080;
+
 let server = http.createServer(handleReq);
 
 server.listen (PORT, function () {
@@ -18,13 +20,13 @@ function handleReq (req, res) {
             res.end("hey hey, folks");
 
         case "/a":
-            return fs.readFile(__dirname + "/quick11.html", function (err, data) {
+            return fs.readFile(__dirname + "/quick111.html", function (err, data) {
                 res.writeHead(200, {"Content-Type": "text-html"});
                 res.end(data);
             });
         
         case "/b":
-            return fs.readFile(__dirname + "/quick22.html", function (err, data) {
+            return fs.readFile(__dirname + "/quick222.html", function (err, data) {
                 res.writeHead(200, {"Content-Type": "text-html"});
                 res.end(data);
             });
