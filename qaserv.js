@@ -17,7 +17,11 @@ function handleReq (req, res) {
     switch (path) {
 
         case "/":
-            res.end("hey hey, folks");
+            // res.end("hey hey, folks");
+            return fs.readFile(__dirname + "/quickie.html", function (err, data) {
+                res.writeHead(200, {"Content-Type": "text-html"});
+                res.end(data);
+            });
 
         case "/a":
             return fs.readFile(__dirname + "/quick111.html", function (err, data) {
