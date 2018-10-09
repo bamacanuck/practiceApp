@@ -9,6 +9,15 @@ server.listen(PORT, function () {
 });
 
 function handleReq (req, res) {
-    res.end ("hey");
+
+    let path = req.url;
+
+    switch (path) {
+
+        case "/":
+            res.end ("hey");
+        
+        
+    }
 };
 
