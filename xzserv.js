@@ -21,6 +21,7 @@ function handleReq (req, res) {
         
         case "/x":
             return fs.readFile(__dirname + "/index.html", function (err, data) {
+                res.writeHead(200, {"Content-Type": "text-html"});
                 res.end(data);
             });
     }
