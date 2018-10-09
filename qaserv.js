@@ -18,19 +18,19 @@ function handleReq (req, res) {
 
         case "/":
             // res.end("hey hey, folks");
-            return fs.readFile(__dirname + "/quickie.html", function (err, data) {
+            return fs.readFile(__dirname + "/home1.html", function (err, data) {
                 res.writeHead(200, {"Content-Type": "text-html"});
                 res.end(data);
             });
 
-        case "/a":
-            return fs.readFile(__dirname + "/quick111.html", function (err, data) {
+        case "/this1":
+            return fs.readFile(__dirname + "/this1.html", function (err, data) {
                 res.writeHead(200, {"Content-Type": "text-html"});
                 res.end(data);
             });
         
-        case "/b":
-            return fs.readFile(__dirname + "/quick222.html", function (err, data) {
+        case "/that1":
+            return fs.readFile(__dirname + "/that1.html", function (err, data) {
                 res.writeHead(200, {"Content-Type": "text-html"});
                 res.end(data);
             });
