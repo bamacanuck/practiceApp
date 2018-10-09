@@ -16,19 +16,19 @@ function handleReq (req, res) {
     switch (path) {
 
         case "/":
-            return fs.readFile(__dirname + "/home1.html", function (err, data) {
+            return fs.readFile(__dirname + "/home1-aqs.html", function (err, data) {
                 res.writeHead(200, { "Content-Type": "text-html" });
                 res.end(data)
             });
         
         case "/abc":
-            return fs.readFile(__dirname + "/this1.html", function (err, data) {
+            return fs.readFile(__dirname + "/this1-aqs.html", function (err, data) {
                 res.writeHead(200, { "Content-Type": "text-html" });
                 res.end(data);
             });
 
         case "/efg":
-            return fs.readFile(__dirname + "/that1.html", function (err, data) {
+            return fs.readFile(__dirname + "/that1-aqs.html", function (err, data) {
                 res.writeHead(200, { "Content-Type": "text-html" });
                 res.end(data);
             });
