@@ -1,4 +1,4 @@
-13.1, 02:08:00
+13.1, 02:40:00
 
 Our qaserv.js collection/group is the most advanced in the directory,
 of our own making. 
