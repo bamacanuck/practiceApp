@@ -17,6 +17,8 @@ function reqHandler(req, res) {
     switch (path) {
 
         case "/":
-            return fs.readFile();
+            return fs.readFile(__dirname + "/home1.html");
+            res.writeHead(200, { "Content-Type": "text-html"});
+            res.end(data);
     }
 };
