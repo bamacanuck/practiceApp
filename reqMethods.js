@@ -8,7 +8,7 @@ var server = http.createServer(handleRequest);
 
 function handleRequest(req, res) {
 
-  // Saving the request data as a variable
+  // Saving the request data as (initially) empty-string variable
   var requestData = "";
 
   // When the server receives data...
