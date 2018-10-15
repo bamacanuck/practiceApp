@@ -1,3 +1,6 @@
+// help:
+// https://nodejs.org/api/stream.html#stream_event_data
+
 // from 13 Express 01 activities - folder 06
 
 var http = require("http");
