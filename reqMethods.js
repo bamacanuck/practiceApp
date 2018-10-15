@@ -21,6 +21,7 @@ function handleRequest(req, res) {
 
     // Add it to requestData.
     reqData += data;
+    // reqData = reqData + data;
   });
 
   // When the request has ended...
