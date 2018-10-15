@@ -14,20 +14,22 @@ var server = http.createServer(handleRequest);
 function handleRequest(req, res) {
 
   // Saving the request data as (initially, anyway) empty-string variable
-  var requestData = "";
+  var reqData = "";
 
   // When the server receives data...
   req.on("data", function(data) {
 
     // Add it to requestData.
-    requestData += data;
+    reqData += data;
   });
 
   // When the request has ended...
   req.on("end", function() {
 
     // Log (server-side) the request method, as well as the data received!
-    console.log("You did a", req.method, "with the data:\n", requestData,", demonstrating the employment of the method - from Postman.");
+    console.log("You did a", req.method, "with the data:\n", reqData,", demonstrating the employment of the method - from Postman.");
+    console.log("");
+    console.log(req);
     res.end();
   });
 
