@@ -1,5 +1,5 @@
 // from 13 Express 01 activities - folder 06
-// Dependencies
+
 var http = require("http");
 
 var PORT = 8080;
