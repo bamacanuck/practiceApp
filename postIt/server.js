@@ -18,7 +18,7 @@ function handleRequest(req, res) {
 }
 
 function renderWelcomePage(req, res) {
-  fs.readFile(__dirname + "/index.html", function(err, data) {
+  fs.readFile(__dirname + "/indexx.html", function(err, data) {
     if (err) {
       res.writeHead(500, { "Content-Type": "text/html" });
       res.end("<html><head><title>Oops</title></head><body><h1>Oops, there was an error</h1></html>");
