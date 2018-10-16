@@ -45,10 +45,10 @@ function renderThankYouPage(req, res) {
     console.log("You just posted some data to the server:\n", requestData);
 
     myHTML =
-      "<html><head><title>Hello Noder!</title></head><body>" +
-      "<h1>Thank you for the data: </h1><code>" +
+      "<html><head><title>hey, you</title></head><body>" +
+      "<h1>thanks for the data: </h1><code> " +
       requestData +
-      "</code>" +
+      " </code>" +
       "</body></html>";
   });
 
