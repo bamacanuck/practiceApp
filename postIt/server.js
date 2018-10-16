@@ -10,12 +10,10 @@ function handleRequest(req, res) {
   var path = req.url;
 
   switch (path) {
-    // case "/thanks":
-      // return renderThankYouPage(req, res);
-    default:
-      return renderWelcomePage(req, res);
     case "/thanks":
       return renderThankYouPage(req, res);
+    default:
+      return renderWelcomePage(req, res);
   }
 }
 
