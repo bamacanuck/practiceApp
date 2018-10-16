@@ -20,8 +20,7 @@ function handleRequest(req, res) {
   req.on("data", function(data) {
 
     // Add it to requestData.
-    // reqData += data;
-    console.log("We got some data!");
+    reqData += data;
     // reqData = reqData + data;
   });
 
@@ -29,7 +28,7 @@ function handleRequest(req, res) {
   req.on("end", function() {
 
     // Log (server-side) the request method, as well as the data received!
-    console.log(data);
+    console.log("You did a", req.method, "with the data:\n", reqData,"- demonstrating the employment of the method - from Postman.");
     // console.log("");
     // console.log(req);
     res.end();
