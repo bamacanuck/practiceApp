@@ -74,7 +74,7 @@ app.post("/api/newguys", function(req, res) {
 
   characters.push(newguy);
 
-  res.json(newguy);
+  // res.json(newguy);
 });
 
 app.listen(PORT, function() {
