@@ -57,7 +57,7 @@ app.get("/api/:characters?", function(req, res) {
   return res.json(characters);
 });
 
-app.post("/api/new", function(req, res) {
+app.post("/api/characters", function(req, res) {
   var newcharacter = req.body;
 
   console.log(newcharacter.name);
