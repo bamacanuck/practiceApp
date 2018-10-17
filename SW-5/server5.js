@@ -60,11 +60,21 @@ app.get("/api/:character?", function(req, res) {
 app.post("/api/characters", function(req, res) {
   var newcharacter = req.body;
 
-  console.log(newcharacter.name);
+  console.log(newcharacter);
 
   characters.push(newcharacter);
 
   res.json(newcharacter);
+});
+
+app.post("/api/newguys", function(req, res) {
+  var newguy = req.body;
+
+  console.log(newguy);
+
+  characters.push(newguy);
+
+  res.json(newguy);
 });
 
 app.listen(PORT, function() {
