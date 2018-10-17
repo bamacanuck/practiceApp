@@ -39,8 +39,8 @@ app.get("/", function(req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
 
-app.get("/api/:characters?", function(req, res) {
-  var chosen = req.params.characters;
+app.get("/api/:character?", function(req, res) {
+  var chosen = req.params.character;
 
   if (chosen) {
     console.log(chosen);
