@@ -56,6 +56,10 @@ app.get("/all", function(req, res) {
   res.json(characters);
 });
 
+app.get("/viewCharacters", function(req, res) {
+  res.json(characters);
+});
+
 // Search for Specific Character (or all characters) - provides JSON
 app.get("/api/:characters?", function(req, res) {
   var chosen = req.params.characters;
