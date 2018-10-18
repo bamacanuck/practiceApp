@@ -72,7 +72,7 @@ app.get("/api/:characters?", function(req, res) {
         return res.json(characters[i]);
       }
     }
-    return res.json(false);
+    return res.send("There's no such data in our database!");
   }
   return res.json(characters);
 });
