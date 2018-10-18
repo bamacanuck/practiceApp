@@ -11,6 +11,7 @@ var PORT = 3000;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
+// ({ extended: true })) above would work just as well, here
 app.use(bodyParser.json());
 
 // Star Wars Characters (DATA)
@@ -72,7 +73,7 @@ app.get("/api/:characters?", function(req, res) {
         return res.json(characters[i]);
       }
     }
-    return res.send("There's no such data in our database!");
+    return res.send("There's no such data in our database! (apologies)");
   }
   return res.json(characters);
 });
