@@ -14,7 +14,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // ({ extended: true })) above would work just as well, here
 app.use(bodyParser.json());
 
-// Star Wars Characters (DATA)
+//
+
+// Characters (DATA)
 // =============================================================
 var characters = [
   {
