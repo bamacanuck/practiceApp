@@ -1,13 +1,13 @@
 var express = require("express");
-var bodyParser = require("body-parser");
-var path = require("path");
+// var bodyParser = require("body-parser");
+// var path = require("path");
 
 var app = express();
 // const PORT = process.env.PORT || 3000;
 var PORT = 3000;
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
 
 var units = [
     {
@@ -40,8 +40,9 @@ var units = [
 ];
 
 app.get("/", function(req, res) {
-    res.json(units);
+    // res.json(units);
     // res.sendFile(path.join(__dirname, "home.html"));
+    res.send("hey");
 });
 
 // app.get("/allUnits", function (req, res) {
@@ -67,3 +68,7 @@ app.get("/", function(req, res) {
 //     return res.json(units);
 
 // });
+
+app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
