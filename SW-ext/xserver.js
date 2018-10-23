@@ -3,9 +3,10 @@ const bodyParser = require("body-parser");
 const path = require("path");
 
 const app = express();
+// const PORT = process.env.PORT || 3000;
 const PORT = 3000;
 
-app.use(bodyParser.urlencoded.encoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 let units = [
@@ -36,7 +37,7 @@ let units = [
         type: "value"
 
     }
-]
+];
 
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "home.html"));
@@ -55,14 +56,13 @@ app.get("/api/:units?", function (req, res) {
         
         for (let i = 0; i < units.length; i ++) {
             if (target == units.routename) {
-                res.json(units[i]);
-            };
-        
+                return res.json(units[i]);
+            }
+        }
+
         return res.send("error - error - error");
-        };
+    }
 
-        return res.json(units);
-};
-
+    return res.json(units);
 
 });
