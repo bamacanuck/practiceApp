@@ -1,15 +1,15 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const path = require("path");
+var express = require("express");
+var bodyParser = require("body-parser");
+var path = require("path");
 
-const app = express();
+var app = express();
 // const PORT = process.env.PORT || 3000;
-const PORT = 3000;
+var PORT = 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-let units = [
+var units = [
     {
         routeName: "meter",
         name: "meter",
@@ -39,30 +39,31 @@ let units = [
     }
 ];
 
-app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "home.html"));
-});
-
-app.get("/allUnits", function (req, res) {
+app.get("/", function(req, res) {
     res.json(units);
+    // res.sendFile(path.join(__dirname, "home.html"));
 });
 
-app.get("/api/:units?", function (req, res) {
+// app.get("/allUnits", function (req, res) {
+//     res.json(units);
+// });
+
+// app.get("/api/:units?", function (req, res) {
     
-    let target = req.params.units;
+//     let target = req.params.units;
 
-    if (target) {
-        console.log(target);
+//     if (target) {
+//         console.log(target);
         
-        for (let i = 0; i < units.length; i ++) {
-            if (target == units.routename) {
-                return res.json(units[i]);
-            }
-        }
+//         for (let i = 0; i < units.length; i ++) {
+//             if (target == units.routename) {
+//                 return res.json(units[i]);
+//             }
+//         }
 
-        return res.send("error - error - error");
-    }
+//         return res.send("error - error - error");
+//     }
 
-    return res.json(units);
+//     return res.json(units);
 
-});
+// });
