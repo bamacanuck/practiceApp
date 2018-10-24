@@ -41,8 +41,8 @@ var units = [
 
 app.get("/", function(req, res) {
     // res.json(units);
-    // res.sendFile(path.join(__dirname, "home.html"));
-    res.send("hey");
+    res.sendFile(path.join(__dirname, "home.html"));
+    // res.send("hey");
 });
 
 app.get("/allUnits", function (req, res) {
@@ -57,7 +57,7 @@ app.get("/api/:units?", function (req, res) {
         console.log(target);
         
         for (let i = 0; i < units.length; i ++) {
-            if (target == units.routename) {
+            if (target == units.routeName) {
                 return res.json(units[i]);
             }
         }
