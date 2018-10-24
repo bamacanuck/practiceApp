@@ -57,7 +57,7 @@ app.get("/api/:units?", function (req, res) {
         console.log(target);
         
         for (let i = 0; i < units.length; i ++) {
-            if (target == units.routeName) {
+            if (target == units[i].routeName) {
                 return res.json(units[i]);
             }
         }
