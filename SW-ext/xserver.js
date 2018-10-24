@@ -65,6 +65,10 @@ app.get("/allUnits", function (req, res) {
 //     res.json(units);
 // });
 
+// *** *** *** *** *** *** *** *** *** ***
+// *** *** *** *** *** *** *** *** *** ***
+// *** *** *** *** *** *** *** *** *** ***
+
 app.post("/api/new", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body-parser middleware
