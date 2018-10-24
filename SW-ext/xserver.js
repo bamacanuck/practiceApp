@@ -49,9 +49,12 @@ app.get("/allUnits", function (req, res) {
     res.json(units);
 });
 
-app.get("/api/:units?", function (req, res) {
-    
-    let target = req.params.units;
+app.get("/api/:unit?", function (req, res) {
+    // note we've used "unit" - not "units" -
+    // on the previous and next lines...
+    // could've been any string, as long as
+    // they're the same
+    let target = req.params.unit;
 
     if (target) {
         console.log(target);
