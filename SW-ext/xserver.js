@@ -41,7 +41,19 @@ var units = [
 
 app.get("/", function(req, res) {
     // res.json(units);
-    res.sendFile(path.join(__dirname, "home.html"));
+    res.sendFile(path.join(__dirname, "view.html"));
+    // res.send("hey");
+});
+
+app.get("/all", function(req, res) {
+    // res.json(units);
+    res.sendFile(path.join(__dirname, "all.html"));
+    // res.send("hey");
+});
+
+app.get("/add", function(req, res) {
+    // res.json(units);
+    res.sendFile(path.join(__dirname, "add.html"));
     // res.send("hey");
 });
 
