@@ -41,19 +41,19 @@ var units = [
 
 app.get("/", function(req, res) {
     // res.json(units);
-    res.sendFile(path.join(__dirname, "view.html"));
+    res.sendFile(path.join(__dirname, "viewx.html"));
     // res.send("hey");
 });
 
 app.get("/all", function(req, res) {
     // res.json(units);
-    res.sendFile(path.join(__dirname, "all.html"));
+    res.sendFile(path.join(__dirname, "allx.html"));
     // res.send("hey");
 });
 
 app.get("/add", function(req, res) {
     // res.json(units);
-    res.sendFile(path.join(__dirname, "add.html"));
+    res.sendFile(path.join(__dirname, "addx.html"));
     // res.send("hey");
 });
 
