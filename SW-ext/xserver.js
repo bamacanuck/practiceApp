@@ -79,7 +79,7 @@ app.post("/api/new", function(req, res) {
   
     console.log(newcharacter);
   
-    characters.push(newcharacter);
+    units.push(newcharacter);
   
     res.json(newcharacter);
   });
