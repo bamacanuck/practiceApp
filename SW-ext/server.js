@@ -98,7 +98,7 @@ app.post("/api/new", function(req, res) {
 
   console.log(newcharacter);
 
-  units.push(newcharacter);
+  characters.push(newcharacter);
 
   res.json(newcharacter);
 });
