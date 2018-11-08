@@ -8,6 +8,7 @@ server.listen (PORT, function () {
     console.log("server listening on PORT: " + PORT);
 })
 
-const theHandler = () => {
-
+let theHandler = function (req, res) {
+    // path = req.url;
+    res.end("The handler has been invoked.");
 }
